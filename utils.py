@@ -74,6 +74,7 @@ class Dataset:
 
     def _build_batches(self, batch_size, keys):
         self._batches = []
+        self._seq_lens = []
         for start in range(0, self._num_examples, batch_size):
             batch = {}
             batch_seq_lens = {}
